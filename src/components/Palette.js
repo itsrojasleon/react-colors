@@ -19,13 +19,15 @@ class Palette extends React.Component {
     });
     return (
       <div className='Palette'>
-        <Slider
-          defaultValue={level}
-          min={100}
-          max={900}
-          onAfterChange={this.changeLevel}
-          step={100}
-        />
+        <div className='slider'>
+          <Slider
+            defaultValue={level}
+            min={100}
+            max={900}
+            onAfterChange={this.changeLevel}
+            step={100}
+          />
+        </div>
         <div className='PaletteColors'>{colorBoxes}</div>
       </div>
     );
