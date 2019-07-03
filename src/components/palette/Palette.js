@@ -1,7 +1,7 @@
 import React from 'react';
-import ColorBox from './ColorBox';
-import './styles/Palette.css';
-import Navbar from './Navbar';
+import ColorBox from '../ColorBox';
+import '../styles/palette/Palette.css';
+import Navbar from '../Navbar';
 
 class Palette extends React.Component {
   state = { level: 500, format: 'hex' };
