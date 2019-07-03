@@ -1,0 +1,20 @@
+.Palette {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.PaletteColors {
+  height: 90%;
+}
+.Palette-fotter {
+  background-color: white;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+}
+.emoji {
+  font-size: 1.5rem;
+  margin: 1rem;
+}

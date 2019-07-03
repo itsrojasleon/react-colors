@@ -1,7 +1,7 @@
 import React from 'react';
-import ColorBox from './ColorBox';
-import './styles/Palette.css';
-import Navbar from './Navbar';
+import ColorBox from '../ColorBox';
+import '../styles/palette/Palette.css';
+import Navbar from '../Navbar';
 
 class Palette extends React.Component {
   state = { level: 500, format: 'hex' };
@@ -11,7 +11,7 @@ class Palette extends React.Component {
   handleChange = format => this.setState({ format });
 
   render() {
-    const { colors } = this.props.palette;
+    const { colors, paletteName, emoji } = this.props.palette;
     const { level, format } = this.state;
     const colorBoxes = colors[level].map(color => {
       return (
@@ -26,6 +26,10 @@ class Palette extends React.Component {
           handleChange={this.handleChange}
         />
         <div className='PaletteColors'>{colorBoxes}</div>
+        <footer className='Palette-fotter'>
+          {paletteName}
+          <span className='emoji'>{emoji}</span>
+        </footer>
       </div>
     );
   }
