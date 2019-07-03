@@ -19,8 +19,6 @@
   color: black;
 }
 
-.slider-container {
-}
 .slider {
   width: 340px;
   margin: 0 10px;
@@ -40,4 +38,13 @@
   outline: none;
   border: 2px solid green;
   box-shadow: none;
+  width: 13px;
+  height: 13px;
+  margin-left: -7px;
+  margin-top: -3px;
+}
+
+.select-container {
+  margin-left: auto;
+  margin-right: 1rem;
 }
