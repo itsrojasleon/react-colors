@@ -36,6 +36,10 @@ class App extends React.Component {
               />
             )}
           />
+          <Route
+            path='/palette/:paletteId/:colorId'
+            render={() => <h1>Single Color Page</h1>}
+          />
         </Switch>
       </BrowserRouter>
     );
