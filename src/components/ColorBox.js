@@ -13,7 +13,7 @@ class ColorBox extends React.Component {
     });
   };
   render() {
-    const { background, name, moreUrl } = this.props;
+    const { background, name, moreUrl, showLink } = this.props;
     const { copied } = this.state;
     return (
       <CopyToClipboard onCopy={this.handleCopy} text={background}>
@@ -32,9 +32,11 @@ class ColorBox extends React.Component {
             </div>
             <button className='copy-button'>Copy</button>
           </div>
-          <Link to={moreUrl} onClick={e => e.stopPropagation()}>
-            <span className='see-more'>More</span>
-          </Link>
+          {showLink && (
+            <Link to={moreUrl} onClick={e => e.stopPropagation()}>
+              <span className='see-more'>More</span>
+            </Link>
+          )}
         </div>
       </CopyToClipboard>
     );
