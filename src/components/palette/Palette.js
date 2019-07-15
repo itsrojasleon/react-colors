@@ -21,7 +21,7 @@ class Palette extends React.Component {
           background={color[format]}
           name={color.name}
           moreUrl={`/palette/${id}/${color.id}`}
-          showLink={true}
+          showingFullPalette
         />
       );
     });
@@ -33,7 +33,7 @@ class Palette extends React.Component {
           handleChange={this.handleChange}
           showingAllColors
         />
-        <div className='PaletteColors'>{colorBoxes}</div>
+        <div className='Palette-colors'>{colorBoxes}</div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>
     );
